@@ -1,0 +1,20 @@
+{
+    "name": "Local Docker C++ Random Number Generator",
+    "context": "../..",
+    "dockerFile": "../../Dockerfile",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "runArgs": [
+        "--init",
+        "--rm",
+        "-v",
+        "${localWorkspaceFolder}:/app"
+    ],
+    "workspaceFolder": "/app",
+    "postCreateCommand": "chmod +x /app/build.sh"
+}
